@@ -1,13 +1,23 @@
 package io.github.nati_dem.chapa;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+import java.util.Arrays;
+import java.util.List;
+
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.junit.jupiter.MockitoExtension;
 
-@SpringBootTest
+@ExtendWith(MockitoExtension.class)
 class ApplicationTests {
-
-	@Test
-	void contextLoads() {
+	
+	@BeforeAll
+	static void setup() {
+	    //log.info("@BeforeAll - executes once before all test methods in this class");
 	}
 
 }
