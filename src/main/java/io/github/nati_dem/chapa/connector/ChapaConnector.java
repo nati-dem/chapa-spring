@@ -1,8 +1,5 @@
 package io.github.nati_dem.chapa.connector;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
-
 import io.github.nati_dem.chapa.exception.ChapaAPIException;
 import io.github.nati_dem.chapa.model.VerifyResponseData;
 import io.github.nati_dem.chapa.util.ChapaUtil;
@@ -16,7 +13,6 @@ import jakarta.ws.rs.core.Response;
  * The <code>ChapaConnector</code> class is responsible for making GET and POST request to Chapa API to initialize
  * a transaction, verify a transaction and create a sub account.
  */
-@Component
 public class ChapaConnector {
 
 	private final WebTarget chapaWebTarget;
@@ -24,7 +20,6 @@ public class ChapaConnector {
     /**
      * @param chapaWebTarget Implementation of {@link WebTarget} interface.
      */
-    @Autowired
     public ChapaConnector(WebTarget chapaWebTarget) {
         this.chapaWebTarget = chapaWebTarget;
     }
